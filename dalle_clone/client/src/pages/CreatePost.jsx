@@ -79,7 +79,7 @@ const CreatePost = () => {
             <button
               type='button'
               onClick={generateImage}
-              className="flex items-center gap-2 px-4 py-2 bg-[#4649ff] text-white rounded-lg font-semibold text-sm"
+              className="text-white  bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
             >
               {generatingImg ? 'Generating...' : 'Generate'}
             </button>
