@@ -6,28 +6,28 @@ import {getRandomPrompt} from '../utils';
 import {FormField, Loader} from '../components';
 
 const CreatePost = () => {
-  const navigate = useNavigate();
-  const [form, setForm] = useState({
-    name: '',
-    prompt: '',
-    photo: '',
-  })
+   const navigate = useNavigate();
+   const [form, setForm] = useState({
+     name: '',
+     prompt: '',
+     photo: '',
+   })
 
-  const [generatingImg, setGeneratingImg] = useState(false);
-  const [loading, setLoading] = useState(false);
+   const [generatingImg, setGeneratingImg] = useState(false);
+   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = () => {
+   const handleSubmit = () => {
 
-  }
+   }
 
-  const handleChange = (e) => {
+   const handleChange = (e) => {
 
 
-  }
+   }
 
-  const handleSupriseMe = () => {
+   const handleSupriseMe = () => {
     
-  }
+   }
   return (
     <section className='max-w-7xl mx-auto'>
       <div>
