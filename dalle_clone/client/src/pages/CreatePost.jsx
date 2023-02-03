@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
 import {preview} from '../assets';
-import {getRandomPrompt} from '../utils';
+import {getRandomPrompt, getRandomPrompt} from '../utils';
 import {FormField, Loader} from '../components';
 
 const CreatePost = () => {
@@ -31,7 +31,8 @@ const CreatePost = () => {
    }
 
    const handleSupriseMe = () => {
-    
+    const getRandomPrompt = getRandomPrompt(form.prompt);
+    setForm({...form, prompt: randomPrompt})
    }
   return (
     <section className='max-w-7xl mx-auto'>
