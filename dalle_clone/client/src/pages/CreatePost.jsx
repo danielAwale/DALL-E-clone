@@ -16,6 +16,10 @@ const CreatePost = () => {
    const [generatingImg, setGeneratingImg] = useState(false);
    const [loading, setLoading] = useState(false);
 
+   const generateImage = () => {
+    
+   }
+
    const handleSubmit = () => {
 
    }
@@ -69,6 +73,16 @@ const CreatePost = () => {
                 </div>
               )}
             </div>
+          </div>
+
+          <div className='mt-5 flex gap-5'>
+            <button
+              type='button'
+              onClick={generateImage}
+              className="flex items-center gap-2 px-4 py-2 bg-[#4649ff] text-white rounded-lg font-semibold text-sm"
+            >
+              {generatingImg ? 'Generating...' : 'Generate'}
+            </button>
 
           </div>
         </form>
