@@ -14,6 +14,8 @@ const FormField = ({labelName, type, name, placeholder, value, handleChange, isS
           )}
 
       </div>
+
+      <input type={type} id={name} name={name} placeholder={placeholder} value={value} onChange={handleChange} required className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-[#6469ff]' />
     </div>
   )
 }
