@@ -2,7 +2,7 @@ import express from "express";
 import * as dotenv from "dotenv";
 import cors from "cors";
 
-import connectDB from "./mongodb/connect";
+import connectDB from "./mongodb/connect.js";
 
 dotenv.config();
 //the above line of code will enable us to pull our enviornment variables from our .env files
