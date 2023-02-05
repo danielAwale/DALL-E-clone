@@ -51,6 +51,7 @@ const CreatePost = () => {
   const handleSupriseMe = () => {
     const randomPrompt = getRandomPrompt(form.prompt);
     setForm({ ...form, prompt: randomPrompt });
+    console.log(randomPrompt);
   };
 
   return (
@@ -77,7 +78,7 @@ const CreatePost = () => {
             labelName="Prompt"
             type="text"
             name="prompt"
-            placeholder="an armchair in the shape of an avocado"
+            placeholder="An Impressionist oil painting of sunflowers in a purple vase…"
             value={form.prompt}
             handleChange={handleChange}
             isSurpriseMe
