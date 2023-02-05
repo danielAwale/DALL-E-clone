@@ -64,6 +64,8 @@ const CreatePost = () => {
       } finally {
         setLoading(false);
       }
+    } else {
+      alert("Please enter a prompt and generate an image");
     }
   };
 
