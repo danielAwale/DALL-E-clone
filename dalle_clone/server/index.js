@@ -13,10 +13,9 @@ const app = express();
 //initialize express
 app.use(cors());
 app.use(express.json({ limit: "50mb" }));
-// to use the routes they need to be added to middleware 
-app.use(/api/v1/post, postRoutes);
-app.use(/api/v1/dalle, dalleRoutes);
-
+// to use the routes they need to be added to middleware
+app.use("/api/v1/post", postRoutes);
+app.use("/api/v1/dalle", dalleRoutes);
 
 app.get("/", async (req, res) => {
   res.send("Hello from Dalle");
