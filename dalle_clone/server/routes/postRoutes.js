@@ -1,7 +1,6 @@
 import express from "express";
 import * as dotenv from "dotenv";
-import pkg from "cloudinary";
-const { V2: cloudinary } = pkg;
+import { v2 as cloudinary } from "cloudinary";
 
 import Post from "../mongodb/models/post.js";
 
