@@ -3,12 +3,12 @@ import React, { useState, useEffect } from "react";
 import { Loader, Card, FormField } from "../components";
 
 const RenderCards = (data, title) => {
-  // if(data.length > 0) {
-  //     return data.map((post) => <Card key={post.id} {...post} />)
-  // }
-  // return (
-  //     <h2 className='mt-5 font-bold text-[#6469ff] text-xl uppercase'>{title}</h2>
-  // )
+  //   if (data?.length > 0) {
+  //     return data.map((post) => <Card key={post.id} {...post} />);
+  //   }
+  //   return (
+  //     <h2 className="mt-5 font-bold text-[#6469ff] text-xl uppercase">{title}</h2>
+  //   );
 };
 
 const Home = () => {
@@ -19,6 +19,25 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
+
+      try {
+        const response = await fetch("http://localhose:8080/api/v1/post", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (response.ok) {
+          const result = await response.json;
+
+          setAllPosts(result.data.reverse);
+        }
+      } catch (error) {
+        alert(error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchPosts();
@@ -61,7 +80,7 @@ const Home = () => {
         {searchText ? (
           <RenderCards data={[]} title="No searched results found" />
         ) : (
-          <RenderCards data={[]} title="No Posts Found" />
+          <RenderCards data={allPosts} title="No Posts Found" />
         )}
       </div>
     </section>
