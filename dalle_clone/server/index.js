@@ -4,7 +4,7 @@ import cors from "cors";
 
 import connectDB from "./mongodb/connect.js";
 import postRoutes from "./routes/postRoutes.js";
-import dalleRoutes from "./routes/dalleRoutes";
+import dalleRoutes from "./routes/dalleRoutes.js";
 
 dotenv.config();
 //the above line of code will enable us to pull our enviornment variables from our .env files
