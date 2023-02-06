@@ -9,3 +9,7 @@
 ### Create Post
 
 ![Screen Shot 2023-02-05 at 6 28 24 PM](https://user-images.githubusercontent.com/101018212/216869527-95df6bc3-3f22-4b06-ac43-9634261eaeb5.png)
+
+#### Deployed back-end on Render and front-end on Netlify
+
+https://regal-kataifi-f2f519.netlify.app/
